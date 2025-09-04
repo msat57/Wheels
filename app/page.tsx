@@ -1,6 +1,183 @@
+'use client'
+
 export default function Home() {
   return (
     <>
+      {/* Navigation */}
+      <nav className="navbar" id="navbar">
+        <div className="nav-container">
+          <a href="#" className="logo">Dallas Wheels</a>
+          <ul className="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="hero" id="home">
+        <div className="wheel-animation"></div>
+        <div className="hero-content">
+          <h1>Dallas Wheels</h1>
+          <p className="tagline">Where Experience Meets Innovation</p>
+          <p className="subtitle">Traditional wheel building enhanced by analytics technology</p>
+          
+          <div className="special-banner">
+            <h2>🎉 INTRODUCTORY SPECIAL</h2>
+            <p className="discount">SAVE UP TO $1,195!</p>
+            <p className="special-text">Premium German Components</p>
+            <p>Munich Composites Rims • Tune Hubs • Sapim Spokes</p>
+            <a href="#pricing" className="btn">View Special Offers</a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="about" id="about">
+        <div className="container">
+          <h2>Precision Craftsmanship Since 1973</h2>
+          <div className="about-content">
+            <div className="about-text">
+              <p>With over 50 years of experience in precision wheel building, Dallas Wheels combines traditional craftsmanship with cutting-edge Trudi analytics technology. From our start in 1973 to owning a bike shop in the &apos;90s, we&apos;ve evolved to meet the demands of modern cycling.</p>
+              <p className="mt-1">Today, we use advanced wheel analytics to ensure every wheel we build meets the highest standards of precision and performance. Whether you&apos;re a competitive cyclist, a weekend warrior, or a bike shop looking for reliable wheel services, we deliver wheels that matter.</p>
+            </div>
+            <div className="stats">
+              <div className="stat">
+                <div className="stat-number">50+</div>
+                <div>Years Experience</div>
+              </div>
+              <div className="stat">
+                <div className="stat-number">10,000+</div>
+                <div>Wheels Built</div>
+              </div>
+              <div className="stat">
+                <div className="stat-number">100%</div>
+                <div>Precision Verified</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="services" id="services">
+        <div className="container">
+          <h2>Our Services</h2>
+          <div className="services-grid">
+            <div className="service-card">
+              <div className="service-icon">⚙️</div>
+              <h3>Custom Wheel Building</h3>
+              <p>Hand-built wheels optimized with analytics technology for perfect tension and trueness</p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">🔧</div>
+              <h3>Precision Repair</h3>
+              <p>Expert wheel truing and repair services to get you back on the road</p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">📊</div>
+              <h3>Wheel Analytics</h3>
+              <p>Detailed reporting on spoke tension, dish, and roundness using Trudi technology</p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">🕰️</div>
+              <h3>Vintage Restoration</h3>
+              <p>Bringing classic wheels back to life with period-correct components</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="pricing" id="pricing">
+        <div className="container">
+          <h2>Introductory Pricing</h2>
+          <div className="pricing-cards">
+            <div className="pricing-card featured">
+              <span className="badge">LIMITED TIME</span>
+              <h3>30mm &quot;All Blacks&quot;</h3>
+              <div className="original-price">$2,295</div>
+              <div className="price">$1,400</div>
+              <p>Save $895!</p>
+              <ul className="price-details">
+                <li>Munich Composites 30mm Rims</li>
+                <li>Tune MAG170/180 Hubs</li>
+                <li>Sapim CX-Ray Spokes</li>
+                <li>Perfect for climbing & all-around</li>
+                <li>Trudi Analytics Report Included</li>
+              </ul>
+              <a href="#contact" className="btn btn-primary">Order Now</a>
+            </div>
+            
+            <div className="pricing-card featured">
+              <span className="badge">LIMITED TIME</span>
+              <h3>47mm &quot;All Blacks&quot;</h3>
+              <div className="original-price">$2,695</div>
+              <div className="price">$1,500</div>
+              <p>Save $1,195!</p>
+              <ul className="price-details">
+                <li>Munich Composites 47mm Rims</li>
+                <li>Tune MAG170/180 Hubs</li>
+                <li>Sapim CX-Ray Spokes</li>
+                <li>Ideal for speed & aerodynamics</li>
+                <li>Trudi Analytics Report Included</li>
+              </ul>
+              <a href="#contact" className="btn btn-primary">Order Now</a>
+            </div>
+            
+            <div className="pricing-card">
+              <h3>Wheel Services</h3>
+              <div className="price">Custom Quote</div>
+              <ul className="price-details">
+                <li>Wheel Truing: From $35</li>
+                <li>Spoke Replacement: From $45</li>
+                <li>Hub Service: From $75</li>
+                <li>Full Rebuild: From $150</li>
+                <li>Analytics Report: $25</li>
+              </ul>
+              <a href="#contact" className="btn">Get Quote</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="contact" id="contact">
+        <div className="container">
+          <h2>Get In Touch</h2>
+          <p className="contact-subtitle">Ready to experience wheels that matter?</p>
+          
+          <div className="contact-info">
+            <div className="contact-item">
+              <h3>📍 Location</h3>
+              <p>Dallas-Fort Worth Area</p>
+              <p>Serving cyclists worldwide</p>
+            </div>
+            <div className="contact-item">
+              <h3>📞 Phone</h3>
+              <p>(972) 555-WHEEL</p>
+              <p>Mon-Fri: 9AM-6PM CST</p>
+            </div>
+            <div className="contact-item">
+              <h3>✉️ Email</h3>
+              <p>info@dallaswheels.com</p>
+              <p>24-48 hour response</p>
+            </div>
+          </div>
+          
+          <a href="mailto:info@dallaswheels.com?subject=Introductory Special Inquiry" className="btn">Contact Us Today</a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer>
+        <p>&copy; 2024 Dallas Wheels. All rights reserved.</p>
+        <p>Traditional craftsmanship. Modern precision.</p>
+      </footer>
+
       <style jsx global>{`
         * {
           margin: 0;
@@ -22,7 +199,7 @@ export default function Home() {
           scroll-behavior: smooth;
         }
 
-        nav {
+        .navbar {
           position: fixed;
           top: 0;
           width: 100%;
@@ -33,7 +210,7 @@ export default function Home() {
           transition: all 0.3s ease;
         }
 
-        nav.scrolled {
+        .navbar.scrolled {
           padding: 0.5rem 0;
           box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
@@ -122,7 +299,7 @@ export default function Home() {
         }
 
         .hero h1 {
-          font-size: clamp(2.5rem, 5vw, 4rem);
+          font-size: 4rem;
           margin-bottom: 1rem;
           background: linear-gradient(45deg, #fff, #e0e0e0);
           -webkit-background-clip: text;
@@ -130,10 +307,15 @@ export default function Home() {
           background-clip: text;
         }
 
-        .hero .tagline {
+        .tagline {
           font-size: 1.25rem;
           margin-bottom: 2rem;
           opacity: 0.9;
+        }
+
+        .subtitle {
+          font-size: 1.1rem;
+          margin-bottom: 2rem;
         }
 
         .special-banner {
@@ -160,6 +342,11 @@ export default function Home() {
           font-size: 2.5rem;
           font-weight: bold;
           color: #ffd700;
+        }
+
+        .special-text {
+          font-size: 1.2rem;
+          margin: 1rem 0;
         }
 
         .btn {
@@ -225,6 +412,10 @@ export default function Home() {
         .about-text {
           font-size: 1.1rem;
           color: var(--text-light);
+        }
+
+        .mt-1 {
+          margin-top: 1rem;
         }
 
         .stats {
@@ -340,6 +531,11 @@ export default function Home() {
           background: white;
         }
 
+        .contact-subtitle {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+        }
+
         .contact-info {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -367,6 +563,10 @@ export default function Home() {
             display: none;
           }
 
+          .hero h1 {
+            font-size: 2.5rem;
+          }
+
           .about-content {
             grid-template-columns: 1fr;
           }
@@ -380,181 +580,6 @@ export default function Home() {
           }
         }
       `}</style>
-
-      {/* Navigation */}
-      <nav id="navbar">
-        <div className="nav-container">
-          <a href="#" className="logo">Dallas Wheels</a>
-          <ul className="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="hero" id="home">
-        <div className="wheel-animation"></div>
-        <div className="hero-content">
-          <h1>Dallas Wheels</h1>
-          <p className="tagline">Where Experience Meets Innovation</p>
-          <p style={{fontSize: '1.1rem', marginBottom: '2rem'}}>Traditional wheel building enhanced by analytics technology</p>
-          
-          <div className="special-banner">
-            <h2>🎉 INTRODUCTORY SPECIAL</h2>
-            <p className="discount">SAVE UP TO $1,195!</p>
-            <p style={{fontSize: '1.2rem', margin: '1rem 0'}}>Premium German Components</p>
-            <p>Munich Composites Rims • Tune Hubs • Sapim Spokes</p>
-            <a href="#pricing" className="btn">View Special Offers</a>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="about" id="about">
-        <div className="container">
-          <h2>Precision Craftsmanship Since 1973</h2>
-          <div className="about-content">
-            <div className="about-text">
-              <p>With over 50 years of experience in precision wheel building, Dallas Wheels combines traditional craftsmanship with cutting-edge Trudi analytics technology. From our start in 1973 to owning a bike shop in the '90s, we've evolved to meet the demands of modern cycling.</p>
-              <p style={{marginTop: '1rem'}}>Today, we use advanced wheel analytics to ensure every wheel we build meets the highest standards of precision and performance. Whether you're a competitive cyclist, a weekend warrior, or a bike shop looking for reliable wheel services, we deliver wheels that matter.</p>
-            </div>
-            <div className="stats">
-              <div className="stat">
-                <div className="stat-number">50+</div>
-                <div>Years Experience</div>
-              </div>
-              <div className="stat">
-                <div className="stat-number">10,000+</div>
-                <div>Wheels Built</div>
-              </div>
-              <div className="stat">
-                <div className="stat-number">100%</div>
-                <div>Precision Verified</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="services" id="services">
-        <div className="container">
-          <h2>Our Services</h2>
-          <div className="services-grid">
-            <div className="service-card">
-              <div className="service-icon">⚙️</div>
-              <h3>Custom Wheel Building</h3>
-              <p>Hand-built wheels optimized with analytics technology for perfect tension and trueness</p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">🔧</div>
-              <h3>Precision Repair</h3>
-              <p>Expert wheel truing and repair services to get you back on the road</p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">📊</div>
-              <h3>Wheel Analytics</h3>
-              <p>Detailed reporting on spoke tension, dish, and roundness using Trudi technology</p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">🕰️</div>
-              <h3>Vintage Restoration</h3>
-              <p>Bringing classic wheels back to life with period-correct components</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="pricing" id="pricing">
-        <div className="container">
-          <h2>Introductory Pricing</h2>
-          <div className="pricing-cards">
-            <div className="pricing-card featured">
-              <span className="badge">LIMITED TIME</span>
-              <h3>30mm "All Blacks"</h3>
-              <div className="original-price">$2,295</div>
-              <div className="price">$1,400</div>
-              <p>Save $895!</p>
-              <ul className="price-details">
-                <li>Munich Composites 30mm Rims</li>
-                <li>Tune MAG170/180 Hubs</li>
-                <li>Sapim CX-Ray Spokes</li>
-                <li>Perfect for climbing & all-around</li>
-                <li>Trudi Analytics Report Included</li>
-              </ul>
-              <a href="#contact" className="btn btn-primary">Order Now</a>
-            </div>
-            
-            <div className="pricing-card featured">
-              <span className="badge">LIMITED TIME</span>
-              <h3>47mm "All Blacks"</h3>
-              <div className="original-price">$2,695</div>
-              <div className="price">$1,500</div>
-              <p>Save $1,195!</p>
-              <ul className="price-details">
-                <li>Munich Composites 47mm Rims</li>
-                <li>Tune MAG170/180 Hubs</li>
-                <li>Sapim CX-Ray Spokes</li>
-                <li>Ideal for speed & aerodynamics</li>
-                <li>Trudi Analytics Report Included</li>
-              </ul>
-              <a href="#contact" className="btn btn-primary">Order Now</a>
-            </div>
-            
-            <div className="pricing-card">
-              <h3>Wheel Services</h3>
-              <div className="price">Custom Quote</div>
-              <ul className="price-details">
-                <li>Wheel Truing: From $35</li>
-                <li>Spoke Replacement: From $45</li>
-                <li>Hub Service: From $75</li>
-                <li>Full Rebuild: From $150</li>
-                <li>Analytics Report: $25</li>
-              </ul>
-              <a href="#contact" className="btn">Get Quote</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="contact" id="contact">
-        <div className="container">
-          <h2>Get In Touch</h2>
-          <p style={{fontSize: '1.2rem', marginBottom: '2rem'}}>Ready to experience wheels that matter?</p>
-          
-          <div className="contact-info">
-            <div className="contact-item">
-              <h3>📍 Location</h3>
-              <p>Dallas-Fort Worth Area</p>
-              <p>Serving cyclists worldwide</p>
-            </div>
-            <div className="contact-item">
-              <h3>📞 Phone</h3>
-              <p>(972) 555-WHEEL</p>
-              <p>Mon-Fri: 9AM-6PM CST</p>
-            </div>
-            <div className="contact-item">
-              <h3>✉️ Email</h3>
-              <p>info@dallaswheels.com</p>
-              <p>24-48 hour response</p>
-            </div>
-          </div>
-          
-          <a href="mailto:info@dallaswheels.com?subject=Introductory Special Inquiry" className="btn">Contact Us Today</a>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer>
-        <p>&copy; 2024 Dallas Wheels. All rights reserved.</p>
-        <p>Traditional craftsmanship. Modern precision.</p>
-      </footer>
     </>
   );
 }
