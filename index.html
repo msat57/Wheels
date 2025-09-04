@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dallas Wheels - Precision Wheel Building | DFW's Premier Custom Wheels</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #e74c3c;
+            --text-light: #666;
+            --bg-light: #f8f8f8;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        radial-gradient(circle at center, #2a2a2a, #0a0a0a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wheel-animation {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 3px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        .wheel-animation::before {
+            content: '';
+            position: absolute;
+            inset: 20px;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        .wheel-animation::after {
+            content: '';
+            position: absolute;
+            inset: 40px;
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .tagline {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Special Banner */
+        .special-banner {
+            background: var(--accent-color);
+            color: white;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            border-radius: 10px;
+            max-width: 600px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .special-banner h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .special-banner .discount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Pricing */
+        .pricing {
+            background: var(--bg-light);
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(231, 76, 60, 0.2);
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.5rem;
+        }
+
+        .price-details {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .price-details li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2::after {
+            background: white;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            padding: 1rem;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Dallas Wheels</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="wheel-animation"></div>
+        <div class="hero-content">
+            <h1>Dallas Wheels</h1>
+            <p class="tagline">Where Experience Meets Innovation</p>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Traditional wheel building enhanced by analytics technology</p>
+            
+            <div class="special-banner">
+                <h2>🎉 INTRODUCTORY SPECIAL</h2>
+                <p class="discount">SAVE UP TO $1,195!</p>
+                <p style="font-size: 1.2rem; margin: 1rem 0;">Premium German Components</p>
+                <p>Munich Composites Rims • Tune Hubs • Sapim Spokes</p>
+                <a href="#pricing" class="btn">View Special Offers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Precision Craftsmanship Since 1973</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>With over 50 years of experience in precision wheel building, Dallas Wheels combines traditional craftsmanship with cutting-edge Trudi analytics technology. From our start in 1973 to owning a bike shop in the '90s, we've evolved to meet the demands of modern cycling.</p>
+                    <p style="margin-top: 1rem;">Today, we use advanced wheel analytics to ensure every wheel we build meets the highest standards of precision and performance. Whether you're a competitive cyclist, a weekend warrior, or a bike shop looking for reliable wheel services, we deliver wheels that matter.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div>Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10,000+</div>
+                        <div>Wheels Built</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div>Precision Verified</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Custom Wheel Building</h3>
+                    <p>Hand-built wheels optimized with analytics technology for perfect tension and trueness</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Precision Repair</h3>
+                    <p>Expert wheel truing and repair services to get you back on the road</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Wheel Analytics</h3>
+                    <p>Detailed reporting on spoke tension, dish, and roundness using Trudi technology</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🕰️</div>
+                    <h3>Vintage Restoration</h3>
+                    <p>Bringing classic wheels back to life with period-correct components</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Introductory Pricing</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card featured">
+                    <span class="badge">LIMITED TIME</span>
+                    <h3>30mm "All Blacks"</h3>
+                    <div class="original-price">$2,295</div>
+                    <div class="price">$1,400</div>
+                    <p>Save $895!</p>
+                    <ul class="price-details">
+                        <li>Munich Composites 30mm Rims</li>
+                        <li>Tune MAG170/180 Hubs</li>
+                        <li>Sapim CX-Ray Spokes</li>
+                        <li>Perfect for climbing & all-around</li>
+                        <li>Trudi Analytics Report Included</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Order Now</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <span class="badge">LIMITED TIME</span>
+                    <h3>47mm "All Blacks"</h3>
+                    <div class="original-price">$2,695</div>
+                    <div class="price">$1,500</div>
+                    <p>Save $1,195!</p>
+                    <ul class="price-details">
+                        <li>Munich Composites 47mm Rims</li>
+                        <li>Tune MAG170/180 Hubs</li>
+                        <li>Sapim CX-Ray Spokes</li>
+                        <li>Ideal for speed & aerodynamics</li>
+                        <li>Trudi Analytics Report Included</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Order Now</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Wheel Services</h3>
+                    <div class="price">Custom Quote</div>
+                    <ul class="price-details">
+                        <li>Wheel Truing: From $35</li>
+                        <li>Spoke Replacement: From $45</li>
+                        <li>Hub Service: From $75</li>
+                        <li>Full Rebuild: From $150</li>
+                        <li>Analytics Report: $25</li>
+                    </ul>
+                    <a href="#contact" class="btn">Get Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Ready to experience wheels that matter?</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>Dallas-Fort Worth Area</p>
+                    <p>Serving cyclists worldwide</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p>(972) 555-WHEEL</p>
+                    <p>Mon-Fri: 9AM-6PM CST</p>
+                </div>
+                <div class="contact-item">
+                    <h3>✉️ Email</h3>
+                    <p>info@dallaswheels.com</p>
+                    <p>24-48 hour response</p>
+                </div>
+            </div>
+            
+            <a href="mailto:info@dallaswheels.com?subject=Introductory Special Inquiry" class="btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dallas Wheels. All rights reserved.</p>
+        <p>Traditional craftsmanship. Modern precision.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service and pricing cards
+        document.querySelectorAll('.service-card, .pricing-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
