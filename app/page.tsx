@@ -43,9 +43,22 @@ export default function Home() {
           <h2>Precision Craftsmanship Since 1973</h2>
           <div className="about-content">
             <div className="about-text">
-              <p>With over 50 years of experience in precision wheel building, Dallas Wheels combines traditional craftsmanship with cutting-edge Trudi analytics technology. From our start in 1973 to owning a bike shop in the &apos;90s, we&apos;ve evolved to meet the demands of modern cycling.</p>
-              <p className="mt-1">Today, we use advanced wheel analytics to ensure every wheel we build meets the highest standards of precision and performance. Whether you&apos;re a competitive cyclist, a weekend warrior, or a bike shop looking for reliable wheel services, we deliver wheels that matter.</p>
+              <p>Having begun building wheels over 50 years ago, Dallas Wheels combines traditional wheel building expertise with cutting-edge analytics technology to build the strongest, longest lasting spoked wheels money can buy. From learning to file lugs (don&apos;t ask) and build wheels in 1973, to owning a successful shop in the &apos;90s, we&apos;ve evolved to meet the demands of modern cycling.</p>
+              <p className="mt-1">Today, we use advanced wheel analytics to ensure every wheel we build meets the highest standards of precision and performance. Whether you&apos;re a competitive cyclist, a weekend warrior, a bike shop looking for reliable wheel services, or a wheelchair user needing dependable mobility solutions, we deliver wheels that matter.</p>
               <p className="mt-1"><strong>Convenient pickup and delivery available through our Bike Medics partnership</strong> - perfect for busy professionals and those needing wheelchair service.</p>
+              <div className="partner-logos" style={{marginTop: '2rem', padding: '1.5rem', background: 'white', borderRadius: '10px', textAlign: 'center'}}>
+                <p style={{marginBottom: '1rem', fontWeight: 'bold', color: '#666'}}>Proud Partners & Technologies:</p>
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem', flexWrap: 'wrap'}}>
+                  <div>
+                    <p style={{fontFamily: 'Arial', fontSize: '1.5rem', fontWeight: 'bold', color: '#2c3e50'}}>TRUDI</p>
+                    <p style={{fontSize: '0.8rem', color: '#666'}}>Analytics Technology</p>
+                  </div>
+                  <div>
+                    <p style={{fontFamily: 'Georgia', fontSize: '1.5rem', fontWeight: 'bold', color: '#8b4513'}}>Phil Wood</p>
+                    <p style={{fontSize: '0.8rem', color: '#666'}}>Premium Components</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="stats">
               <div className="stat">
@@ -133,6 +146,7 @@ export default function Home() {
               <div className="original-price">$2,295</div>
               <div className="price">$1,400</div>
               <p>Save $895!</p>
+              <p style={{fontWeight: 'bold', color: '#666'}}>Weight: 1,385g per set</p>
               <ul className="price-details">
                 <li>Munich Composites 30mm Rims</li>
                 <li>Tune MAG170/180 Hubs</li>
@@ -149,6 +163,7 @@ export default function Home() {
               <div className="original-price">$2,695</div>
               <div className="price">$1,500</div>
               <p>Save $1,195!</p>
+              <p style={{fontWeight: 'bold', color: '#666'}}>Weight: 1,495g per set</p>
               <ul className="price-details">
                 <li>Munich Composites 47mm Rims</li>
                 <li>Tune MAG170/180 Hubs</li>
