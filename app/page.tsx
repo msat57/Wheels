@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function Home() {
   return (
     <>
@@ -43,6 +45,7 @@ export default function Home() {
             <div className="about-text">
               <p>With over 50 years of experience in precision wheel building, Dallas Wheels combines traditional craftsmanship with cutting-edge Trudi analytics technology. From our start in 1973 to owning a bike shop in the &apos;90s, we&apos;ve evolved to meet the demands of modern cycling.</p>
               <p className="mt-1">Today, we use advanced wheel analytics to ensure every wheel we build meets the highest standards of precision and performance. Whether you&apos;re a competitive cyclist, a weekend warrior, or a bike shop looking for reliable wheel services, we deliver wheels that matter.</p>
+              <p className="mt-1"><strong>Convenient pickup and delivery available through our Bike Medics partnership</strong> - perfect for busy professionals and those needing wheelchair service.</p>
             </div>
             <div className="stats">
               <div className="stat">
@@ -56,6 +59,24 @@ export default function Home() {
               <div className="stat">
                 <div className="stat-number">100%</div>
                 <div>Precision Verified</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Image Gallery */}
+          <div className="image-gallery">
+            <div className="gallery-grid">
+              <div className="gallery-item">
+                <Image src="/wheel1.jpg" alt="Custom wheel build" width={300} height={200} />
+              </div>
+              <div className="gallery-item">
+                <Image src="/wheel2.jpg" alt="Precision wheel truing" width={300} height={200} />
+              </div>
+              <div className="gallery-item">
+                <Image src="/wheel3.jpg" alt="Wheel analytics" width={300} height={200} />
+              </div>
+              <div className="gallery-item">
+                <Image src="/wheel4.jpg" alt="Finished wheelset" width={300} height={200} />
               </div>
             </div>
           </div>
@@ -81,6 +102,16 @@ export default function Home() {
               <div className="service-icon">📊</div>
               <h3>Wheel Analytics</h3>
               <p>Detailed reporting on spoke tension, dish, and roundness using Trudi technology</p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">♿</div>
+              <h3>Wheelchair & DME Services</h3>
+              <p>Specialized wheelchair wheel repair and maintenance. Pickup/delivery via Bike Medics for your convenience</p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">🚐</div>
+              <h3>Pickup & Delivery</h3>
+              <p>Through our Bike Medics partnership - convenient service at your home or office</p>
             </div>
             <div className="service-card">
               <div className="service-icon">🕰️</div>
@@ -136,6 +167,8 @@ export default function Home() {
                 <li>Spoke Replacement: From $45</li>
                 <li>Hub Service: From $75</li>
                 <li>Full Rebuild: From $150</li>
+                <li>Wheelchair Wheel Service: From $40</li>
+                <li>Pickup/Delivery (via Bike Medics): $25</li>
                 <li>Analytics Report: $25</li>
               </ul>
               <a href="#contact" className="btn">Get Quote</a>
@@ -154,7 +187,8 @@ export default function Home() {
             <div className="contact-item">
               <h3>📍 Location</h3>
               <p>Dallas-Fort Worth Area</p>
-              <p>Serving cyclists worldwide</p>
+              <p>Pickup/Delivery via Bike Medics</p>
+              <p>Serving cyclists & wheelchair users</p>
             </div>
             <div className="contact-item">
               <h3>📞 Phone</h3>
@@ -174,8 +208,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer>
-        <p>&copy; 2024 Dallas Wheels. All rights reserved.</p>
+        <p>&copy; 2025 Dallas Wheels. All rights reserved.</p>
         <p>Traditional craftsmanship. Modern precision.</p>
+        <p>Proud partner with Bike Medics for convenient pickup & delivery service</p>
       </footer>
 
       <style jsx global>{`
@@ -435,6 +470,33 @@ export default function Home() {
           color: var(--accent-color);
         }
 
+        .image-gallery {
+          margin-top: 3rem;
+        }
+
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .gallery-item {
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+          transform: scale(1.05);
+        }
+
+        .gallery-item img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
         .services-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -577,6 +639,10 @@ export default function Home() {
 
           .pricing-card.featured {
             transform: none;
+          }
+
+          .gallery-grid {
+            grid-template-columns: 1fr;
           }
         }
       `}</style>
