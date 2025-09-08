@@ -104,7 +104,68 @@ export default function DallasWheelsHomepage() {
       <section id="contact" className="py-12 px-4 md:px-12">
         <h2 className="text-2xl font-semibold mb-4 text-teal-700">Get in Touch</h2>
         <p className="mb-4 text-gray-700">Want a consultation or custom build quote? Reach out below.</p>
-        <Button>Contact Form</Button>
+       <section id="contact" className="py-12 px-4 md:px-12">
+  <h2 className="text-2xl font-semibold mb-4 text-teal-700">Get in Touch</h2>
+  <p className="mb-4 text-gray-700">
+    Want a consultation or custom build quote? Reach out below.
+  </p>
+
+  {/* Netlify form starts here */}
+  <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    action="/success"
+    className="mt-6 space-y-4 max-w-xl"
+  >
+    <input type="hidden" name="form-name" value="contact" />
+    <p className="hidden">
+      <label>
+        Don’t fill this out: <input name="bot-field" />
+      </label>
+    </p>
+
+    <label className="block">
+      <span className="block font-medium">Your Name</span>
+      <input
+        type="text"
+        name="name"
+        required
+        className="w-full border rounded px-3 py-2"
+      />
+    </label>
+
+    <label className="block">
+      <span className="block font-medium">Your Email</span>
+      <input
+        type="email"
+        name="email"
+        required
+        className="w-full border rounded px-3 py-2"
+      />
+    </label>
+
+    <label className="block">
+      <span className="block font-medium">Message</span>
+      <textarea
+        name="message"
+        rows={5}
+        required
+        className="w-full border rounded px-3 py-2"
+      />
+    </label>
+
+    <button
+      type="submit"
+      className="inline-flex items-center px-4 py-2 rounded bg-black text-white"
+    >
+      Send
+    </button>
+  </form>
+  {/* Netlify form ends here */}
+</section>
+
       </section>
 
       <footer className="bg-teal-700 py-6 px-4 md:px-12 text-sm text-white text-center">
@@ -113,4 +174,5 @@ export default function DallasWheelsHomepage() {
     </main>
   );
 }
+
 
