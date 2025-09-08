@@ -71,26 +71,28 @@ export default function DallasWheelsHomepage() {
         </ul>
       </section>
 
-      <section id="gallery" className="py-12 px-4 md:px-12">
-        <h2 className="text-2xl font-semibold mb-4 text-teal-700">Gallery</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[1, 2, 3, 4].map((num) => (
-            <a
-              key={num}
-              href={`/gallery/nate-${num}.jpg`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="aspect-square overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-200"
-            >
-              <img
-                src={`/gallery/nate-${num}.jpg`}
-                alt={`Gallery Image ${num}`}
-                className="object-cover w-full h-full"
-              />
-            </a>
-          ))}
-        </div>
-      </section>
+      import Image from "next/image";
+
+<section id="gallery" className="py-12 px-4 md:px-12">
+  <h2 className="text-2xl font-semibold mb-6 text-teal-700">Gallery</h2>
+
+  {[
+    "/gallery/wheel-1.jpg",
+    "/gallery/wheel-2.jpg",
+    "/gallery/wheel-3.jpg",
+  ].map((src) => (
+    <div key={src} className="mb-6">
+      <Image
+        src={src}
+        alt="Dallas Wheels gallery"
+        width={1600}
+        height={1067}
+        className="w-full h-auto rounded"
+      />
+    </div>
+  ))}
+</section>
+
 
       <section id="testimonials" className="bg-gray-50 py-12 px-4 md:px-12">
         <h2 className="text-2xl font-semibold mb-4 text-teal-700">Testimonials</h2>
@@ -174,6 +176,7 @@ export default function DallasWheelsHomepage() {
     </main>
   );
 }
+
 
 
 
