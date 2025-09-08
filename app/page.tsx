@@ -71,30 +71,27 @@ export default function DallasWheelsHomepage() {
         </ul>
       </section>
 
+{/* --- Gallery start --- */}
 <section id="gallery" className="py-12 px-4 md:px-12">
   <h2 className="text-2xl font-semibold mb-6 text-teal-700">Gallery</h2>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    {[
-      {Array.from({ length: 12 }, (_, i) => `/gallery/wheel-${i + 1}.jpg`).map((src) => (
-  <div key={src} className="relative w-full h-64">
-    <Image src={src} alt="Dallas Wheels gallery" fill className="object-cover rounded" />
-  </div>
-))}
-,
-      // add more here if you have them
-    ].map((src) => (
-      <div key={src} className="relative w-full h-64">
-        <Image
-          src={src}
-          alt="Dallas Wheels gallery"
-          fill
-          className="object-cover rounded"
-        />
-      </div>
-    ))}
+    {Array.from({ length: 4 }, (_, i) => `/gallery/wheel-${i + 1}.jpg`).map(
+      (src) => (
+        <div key={src} className="relative w-full h-64">
+          <Image
+            src={src}
+            alt="Dallas Wheels gallery"
+            fill
+            className="object-cover rounded"
+          />
+        </div>
+      )
+    )}
   </div>
 </section>
+{/* --- Gallery end --- */}
+
 
 
 
@@ -180,6 +177,7 @@ export default function DallasWheelsHomepage() {
     </main>
   );
 }
+
 
 
 
