@@ -76,9 +76,12 @@ export default function DallasWheelsHomepage() {
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
     {[
-      "/gallery/wheel-1.jpg",
-      "/gallery/wheel-2.jpg",
-      "/gallery/wheel-3.jpg",
+      {Array.from({ length: 12 }, (_, i) => `/gallery/wheel-${i + 1}.jpg`).map((src) => (
+  <div key={src} className="relative w-full h-64">
+    <Image src={src} alt="Dallas Wheels gallery" fill className="object-cover rounded" />
+  </div>
+))}
+,
       // add more here if you have them
     ].map((src) => (
       <div key={src} className="relative w-full h-64">
@@ -177,6 +180,7 @@ export default function DallasWheelsHomepage() {
     </main>
   );
 }
+
 
 
 
