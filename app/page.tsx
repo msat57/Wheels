@@ -177,7 +177,7 @@ export default function DallasWheelsHomepage() {
               className="aspect-square overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-200"
             >
               <Image
-                src={`/nate-${num}.jpg`}
+                src={`/wheel-${num}.jpg`}
                 alt={`Gallery Image ${num}`}
                 width={200}
                 height={200}
@@ -293,3 +293,4 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
+
