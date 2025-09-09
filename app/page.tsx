@@ -103,35 +103,35 @@ export default function DallasWheelsHomepage() {
           
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent>
-              <h3 className="font-bold text-lg mb-2 text-blue-600">Wheelchair & DME Services</h3>
+              <h3 className="font-bold text-lg mb-2 text-[#1E3C72]">Wheelchair & DME Services</h3>
               <p>Precision wheel services for wheelchair athletes and users. Racing performance or daily reliability - we understand both needs. Pickup & delivery via Bike Medics partnership makes service convenient.</p>
             </CardContent>
           </Card>
           
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent>
-              <h3 className="font-bold text-lg mb-2 text-blue-600">Analytics-Driven Builds</h3>
+              <h3 className="font-bold text-lg mb-2 text-[#1E3C72]">Analytics-Driven Builds</h3>
               <p>Advanced wheel analytics technology ensures optimal spoke tension and wheel balance. Computer-calculated precision combined with traditional building expertise delivers superior performance and reliability.</p>
             </CardContent>
           </Card>
           
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent>
-              <h3 className="font-bold text-lg mb-2 text-blue-600">Fleet & Team Services</h3>
+              <h3 className="font-bold text-lg mb-2 text-[#1E3C72]">Fleet & Team Services</h3>
               <p>Professional team and fleet services with volume pricing. Consistent builds, fast turnaround, expert support for racing teams, bike shops, and fleet operations. Contact for volume discounts.</p>
             </CardContent>
           </Card>
           
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent>
-              <h3 className="font-bold text-lg mb-2 text-blue-600">Vintage Restoration</h3>
+              <h3 className="font-bold text-lg mb-2 text-[#1E3C72]">Vintage Restoration</h3>
               <p>Classic wheel restoration and rebuilding. Period-correct components and traditional techniques preserve the authenticity of vintage bicycles while ensuring modern reliability.</p>
             </CardContent>
           </Card>
           
           <Card className="hover:shadow-lg transition-shadow">
             <CardContent>
-              <h3 className="font-bold text-lg mb-2 text-blue-600">Precision Repair & Truing</h3>
+              <h3 className="font-bold text-lg mb-2 text-[#1E3C72]">Precision Repair & Truing</h3>
               <p>Expert wheel repair services with comprehensive analysis. We provide detailed reporting on lateral, radial, and dish measurements with professional-grade truing and tension balancing.</p>
             </CardContent>
           </Card>
@@ -177,7 +177,7 @@ export default function DallasWheelsHomepage() {
               className="aspect-square overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-200"
             >
               <Image
-                src={`/wheel-${num}.jpg`}
+                src={`/nate-${num}.jpg`}
                 alt={`Gallery Image ${num}`}
                 width={200}
                 height={200}
@@ -293,5 +293,3 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
-
-
