@@ -7,21 +7,33 @@ export default function Header() {
 
   return (
     <header className="flex items-center justify-between px-6 py-4 bg-white shadow-md sticky top-0 z-50">
-      {/* Logo / Site name */}
-      <Link href="/" className="flex items-center gap-2">
-  <svg width="40" height="40" viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="45" fill="none" stroke="#004080" strokeWidth="3"/>
-    <circle cx="50" cy="50" r="25" fill="none" stroke="#004080" strokeWidth="2"/>
-    <g stroke="#004080" strokeWidth="2">
-      <line x1="50" y1="5" x2="50" y2="95"/>
-      <line x1="5" y1="50" x2="95" y2="50"/>
-      <line x1="14.6" y1="14.6" x2="85.4" y2="85.4"/>
-      <line x1="85.4" y1="14.6" x2="14.6" y2="85.4"/>
-    </g>
-    <text x="50" y="58" textAnchor="middle" fontFamily="Arial" fontSize="24" fontWeight="bold" fill="#004080">D</text>
-  </svg>
-  <span className="text-xl font-bold text-teal-700">Dallas Wheels</span>
-</Link>
+      {/* Logo + Site name */}
+      <Link href="/" className="flex items-center gap-3">
+        <svg width="60" height="60" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#003366" strokeWidth="4" />
+          <circle cx="50" cy="50" r="25" fill="none" stroke="#003366" strokeWidth="3" />
+          <g stroke="#003366" strokeWidth="3">
+            <line x1="50" y1="5" x2="50" y2="95" />
+            <line x1="5" y1="50" x2="95" y2="50" />
+            <line x1="14.6" y1="14.6" x2="85.4" y2="85.4" />
+            <line x1="85.4" y1="14.6" x2="14.6" y2="85.4" />
+          </g>
+          <text
+            x="50"
+            y="60"
+            textAnchor="middle"
+            fontFamily="Arial"
+            fontSize="32"
+            fontWeight="bold"
+            fill="#003366"
+          >
+            D
+          </text>
+        </svg>
+        <span className="text-2xl md:text-3xl font-extrabold text-[#003366]">
+          Dallas Wheels
+        </span>
+      </Link>
 
       {/* Hamburger button (mobile only) */}
       <button
