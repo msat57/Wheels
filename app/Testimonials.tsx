@@ -24,13 +24,12 @@ export default function Testimonials() {
   // auto-rotate every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      setFade(false) // start fade-out
+      setFade(false) // fade out
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % testimonials.length)
-        setFade(true) // fade-in new one
-      }, 300) // fade-out duration
+        setFade(true) // fade in
+      }, 300)
     }, 5000)
-
     return () => clearInterval(timer)
   }, [])
 
@@ -50,13 +49,13 @@ export default function Testimonials() {
         </cite>
 
         {/* Navigation dots */}
-        <div className="flex justify-center mt-4 gap-2">
+        <div className="flex justify-center mt-4 gap-3">
           {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`w-3 h-3 rounded-full ${
-                i === index ? "bg-[#003366]" : "bg-gray-300"
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                i === index ? "bg-[#003366] scale-125" : "bg-gray-300 scale-100"
               }`}
               aria-label={`Show testimonial ${i + 1}`}
             />
