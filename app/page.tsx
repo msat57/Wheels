@@ -1,3 +1,4 @@
+import SpecialSection from './SpecialSection'
 'use client'
 
 import Image from 'next/image'
@@ -39,58 +40,8 @@ export default function DallasWheelsHomepage() {
         </p>
       </section>
 
-      {/* Introductory Special */}
-      <section className="bg-white p-8 rounded-none md:rounded-xl mb-12 text-left mx-0 md:mx-12 border border-gray-200">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#003366]">Introductory Special</h2>
-        <p className="text-gray-700 mb-6">
-          2 Killer options on hand built DallasWheels wheelsets — <strong>30mm (1,455 g)</strong> and <strong>47mm (1,525 g)</strong> rims,
-          internal nipples, with 21mm internal width. Both options use <strong>Tune KillHill/ClimbHill 24h centerlock hubs</strong> and
-          super-strong, braided carbon, un-branded, un-painted <strong>Munich Composites (Schmolke) rims</strong>, with internal nipples
-          for maximum aerodynamics. Very nice! We will provide a runout and tension report for each wheel, and a free re-true/re-tension
-          within the first year.
-        </p>
+    <SpecialSection />
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <Card className="relative">
-            <CardContent>
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">
-                LIMITED TIME • LIMITED QTY
-              </div>
-              <h3 className="text-xl font-bold mb-2">30mm Carbon Wheelset</h3>
-              <div className="text-gray-500 line-through">Regular $1,950</div>
-              <div className="text-3xl font-bold text-[#003366] my-2">$585</div>
-              <p className="text-sm text-gray-600">1,455 g • 21mm internal • internal nipples</p>
-            </CardContent>
-          </Card>
-
-          <Card className="relative">
-            <CardContent>
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">
-                LIMITED TIME • LIMITED QTY
-              </div>
-              <h3 className="text-xl font-bold mb-2">47mm Carbon Wheelset</h3>
-              <div className="text-gray-500 line-through">Regular $2,300</div>
-              <div className="text-3xl font-bold text-[#003366] my-2">$725</div>
-              <p className="text-sm text-gray-600">1,525 g • 21mm internal • internal nipples</p>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="mt-6 space-y-4 text-gray-700">
-          <p>
-            <strong>Tune KillHill/ClimbHill hubs</strong> bring together expert German engineering and hand-finished craftsmanship.
-            CNC-machined from aerospace-grade aluminum, they offer exceptional fatigue strength without unnecessary weight.
-            A refined anodized coating defends against corrosion and wear, while hand assembly and adjustment in Buggingen
-            ensure precision, durability, and performance that last.
-          </p>
-          <p>
-            <strong>Munich Composites rims</strong> deliver precise engineering and high-end design, available in 47 mm and 30 mm depths
-            for both speed and versatility. Built with advanced composites, they provide stiffness, lightweight durability,
-            and smooth ride response. The internal nipple design streamlines aerodynamics and keeps the build clean and lasting.
-            The raw braided carbon weave stands out with a technical yet refined finish that reflects superior craftsmanship.
-          </p>
-        </div>
-      </section>
 
       {/* Services */}
       <section id="services" className="py-12 px-4 md:px-12">
@@ -236,3 +187,4 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
+
