@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import SpecialSection from './SpecialSection'
+import Testimonials from "./Testimonials"
 
 
 
@@ -173,14 +174,9 @@ export default function DallasWheelsHomepage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-gray-50 py-12 px-4 md:px-12">
-        <h2 className="text-2xl font-semibold mb-6 text-center text-[#003366]">Testimonials</h2>
-        <div className="space-y-6 max-w-4xl mx-auto">
-          <Card><CardContent><blockquote className="italic text-lg mb-2">"Dallas Wheels built the most reliable wheelset I've ever used—solid in all conditions."</blockquote><cite className="text-[#003366] font-medium">— A. Cyclist</cite></CardContent></Card>
-          <Card><CardContent><blockquote className="italic text-lg mb-2">"When my wheelchair rim cracked, DW had me rolling again in days. Pickup and delivery was a lifesaver."</blockquote><cite className="text-[#003366] font-medium">— R. Adams</cite></CardContent></Card>
-          <Card><CardContent><blockquote className="italic text-lg mb-2">"A rare blend of old-school craft and nerdy precision. Love what they're doing."</blockquote><cite className="text-[#003366] font-medium">— B. Engineer</cite></CardContent></Card>
-        </div>
-      </section>
+
+      <Testimonials />
+
 
       {/* Footer */}
       <footer className="bg-stone-800 py-6 px-4 md:px-12 text-sm text-white text-center">
@@ -189,6 +185,7 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
+
 
 
 
