@@ -1,5 +1,5 @@
-import SpecialSection from './SpecialSection'
 'use client'
+  import SpecialSection from './SpecialSection'
 
 import Image from 'next/image'
 
@@ -187,4 +187,5 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
+
 
