@@ -47,36 +47,67 @@ export default function DallasWheelsHomepage() {
       {/* Collapsible Introductory Special */}
       <SpecialSection />
 
-      {/* Services */}
-      <section id="services" className="py-12 px-4 md:px-12">
-        <h2 className="text-2xl font-semibold mb-6 text-[#003366]">Services</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card><CardContent>
-            <h3 className="font-bold text-lg mb-2 text-[#003366]">Custom Bicycle Wheels</h3>
-            <p>Traditional wheel building techniques enhanced by advanced analytics. Each build includes detailed tension mapping report.</p>
-          </CardContent></Card>
-          <Card><CardContent>
-            <h3 className="font-bold text-lg mb-2 text-[#003366]">Wheelchair & DME</h3>
-            <p>Precision wheel services for wheelchair athletes and users. Pickup/delivery via Bike Medics makes service convenient.</p>
-          </CardContent></Card>
-          <Card><CardContent>
-            <h3 className="font-bold text-lg mb-2 text-[#003366]">Analytics-Driven Builds</h3>
-            <p>Advanced analytics ensures optimal spoke tension and wheel balance. Traditional building expertise for superior reliability.</p>
-          </CardContent></Card>
-          <Card><CardContent>
-            <h3 className="font-bold text-lg mb-2 text-[#003366]">Fleet & Team Services</h3>
-            <p>Professional team and fleet builds with volume pricing. Fast turnaround and expert support for bike shops and race teams.</p>
-          </CardContent></Card>
-          <Card><CardContent>
-            <h3 className="font-bold text-lg mb-2 text-[#003366]">Vintage Restoration</h3>
-            <p>Classic wheel restoration with period-correct parts and traditional techniques for authentic results and modern reliability.</p>
-          </CardContent></Card>
-          <Card><CardContent>
-            <h3 className="font-bold text-lg mb-2 text-[#003366]">Precision Repair & Truing</h3>
-            <p>Expert repair and truing with full lateral, radial, and dish analysis. Includes professional-grade tension balancing.</p>
-          </CardContent></Card>
-        </div>
-      </section>
+     {/* Services */}
+<section id="services" className="py-12 px-4 md:px-12">
+  <h2 className="text-2xl font-semibold mb-6 text-[#003366]">Services</h2>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <Card><CardContent>
+      <h3 className="font-bold text-lg mb-2 text-[#003366]">Custom Bicycle Wheels</h3>
+      <p>Traditional wheel building techniques enhanced by advanced analytics. Each build includes a detailed tension map.</p>
+    </CardContent></Card>
+
+    <Card><CardContent>
+      <h3 className="font-bold text-lg mb-2 text-[#003366]">Wheelchair & DME</h3>
+      <p>Precision wheel services for wheelchair athletes and users. Pickup/delivery via Bike Medics for convenience.</p>
+    </CardContent></Card>
+
+    <Card><CardContent>
+      <h3 className="font-bold text-lg mb-2 text-[#003366]">Analytics-Driven Builds</h3>
+      <p>Optimal spoke tension and balance using advanced analytics, combined with traditional craft for reliability.</p>
+    </CardContent></Card>
+
+    <Card><CardContent>
+      <h3 className="font-bold text-lg mb-2 text-[#003366]">Fleet & Team Services</h3>
+      <p>Consistent builds with volume pricing. Fast turnaround and pro support for shops, teams, and fleets.</p>
+    </CardContent></Card>
+
+    <Card><CardContent>
+      <h3 className="font-bold text-lg mb-2 text-[#003366]">Vintage Restoration</h3>
+      <p>Period-correct restoration with traditional techniques for authenticity and modern-day reliability.</p>
+    </CardContent></Card>
+
+    <Card><CardContent>
+      <h3 className="font-bold text-lg mb-2 text-[#003366]">Precision Repair & Truing</h3>
+      <p>Professional truing and repair with full lateral, radial, and dish analysis, plus balanced tensioning.</p>
+    </CardContent></Card>
+
+    {/* ✅ NEW: Hub Servicing */}
+    <Card className="hover:shadow-lg transition-shadow">
+      <CardContent>
+        <h3 className="font-bold text-lg mb-2 text-[#003366]">Hub Servicing</h3>
+        <p>
+          Cleaning, greasing, and fine-tuning sealed or cup-and-cone hubs for smooth rotation, proper preload,
+          and long bearing life. Includes inspection for play, noise, and wear.
+        </p>
+      </CardContent>
+    </Card>
+
+    {/* ✅ NEW: Wheel Balancing */}
+    <Card className="hover:shadow-lg transition-shadow">
+      <CardContent>
+        <h3 className="font-bold text-lg mb-2 text-[#003366]">Wheel Balancing</h3>
+        <p>
+          Static balancing for smoother rotation: identify the heavy spot and apply a tiny counterweight
+          (adhesive/lead string) opposite it to reduce vibration at speed.
+        </p>
+        <p className="italic text-sm mt-2 text-gray-600">
+          Recommended for deep carbon rims, high-speed setups, and e-bikes.
+        </p>
+      </CardContent>
+    </Card>
+  </div>
+</section>
+
 
       {/* Fleet & Team */}
       <section id="fleet" className="py-12 px-4 md:px-12 bg-gray-50">
@@ -184,6 +215,7 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
+
 
 
 
