@@ -135,24 +135,25 @@ export default function DallasWheelsHomepage() {
 
       {/* Gallery with loop */}
       <section id="gallery" className="py-12 px-4 md:px-12">
-        <h2 className="text-2xl font-semibold mb-6 text-[#003366] text-center">Gallery</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {Array.from({ length: 12 }, (_, i) => (
-            <div
-              key={i}
-              className="aspect-square overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-200"
-            >
-              <Image
-                src={`/gallery/wheel-${i + 1}.jpg`}
-                alt={`Gallery Image ${i + 1}`}
-                width={400}
-                height={400}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+  <h2 className="text-2xl font-semibold mb-6 text-[#003366] text-center">Gallery</h2>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {galleryImages.map((num) => (
+      <div
+        key={num}
+        className="aspect-square overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-200"
+      >
+        <Image
+          src={`/gallery/wheel-${num}.jpg`}
+          alt={`Gallery Image ${num}`}
+          width={400}
+          height={400}
+          className="object-cover w-full h-full"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* Contact */}
       <section id="contact" className="bg-white py-12 px-4 md:px-12">
@@ -185,6 +186,7 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
+
 
 
 
