@@ -1,12 +1,13 @@
-'use client'
+"use client"
 
-import Image from 'next/image'
-import SpecialSection from './SpecialSection'
+import Image from "next/image"
+import SpecialSection from "./SpecialSection"
 import Testimonials from "./Testimonials"
 
+// Gallery images you currently have
+const galleryImages = [1, 2, 3, 4, 5, 6]
 
-
-// Reusable components
+// Simple reusable components
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <div className={`bg-white rounded-lg border border-gray-200 shadow-sm ${className}`}>
@@ -43,8 +44,8 @@ export default function DallasWheelsHomepage() {
         </p>
       </section>
 
-    <SpecialSection />
-
+      {/* Collapsible Introductory Special */}
+      <SpecialSection />
 
       {/* Services */}
       <section id="services" className="py-12 px-4 md:px-12">
@@ -133,27 +134,26 @@ export default function DallasWheelsHomepage() {
         </div>
       </section>
 
-      {/* Gallery with loop */}
+      {/* Gallery */}
       <section id="gallery" className="py-12 px-4 md:px-12">
-  <h2 className="text-2xl font-semibold mb-6 text-[#003366] text-center">Gallery</h2>
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-    {galleryImages.map((num) => (
-      <div
-        key={num}
-        className="aspect-square overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-200"
-      >
-        <Image
-          src={`/gallery/wheel-${num}.jpg`}
-          alt={`Gallery Image ${num}`}
-          width={400}
-          height={400}
-          className="object-cover w-full h-full"
-        />
-      </div>
-    ))}
-  </div>
-</section>
-
+        <h2 className="text-2xl font-semibold mb-6 text-[#003366] text-center">Gallery</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {galleryImages.map((num) => (
+            <div
+              key={num}
+              className="aspect-square overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-200"
+            >
+              <Image
+                src={`/gallery/wheel-${num}.jpg`}
+                alt={`Gallery Image ${num}`}
+                width={400}
+                height={400}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Contact */}
       <section id="contact" className="bg-white py-12 px-4 md:px-12">
@@ -174,10 +174,8 @@ export default function DallasWheelsHomepage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-
+      {/* Rotating Testimonials */}
       <Testimonials />
-
 
       {/* Footer */}
       <footer className="bg-stone-800 py-6 px-4 md:px-12 text-sm text-white text-center">
@@ -186,9 +184,6 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
-
-
-
 
 
 
