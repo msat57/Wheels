@@ -19,22 +19,30 @@ const testimonials = [
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0)
+  const [fade, setFade] = useState(true)
 
   // auto-rotate every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length)
+      setFade(false) // start fade-out
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % testimonials.length)
+        setFade(true) // fade-in new one
+      }, 300) // fade-out duration
     }, 5000)
+
     return () => clearInterval(timer)
   }, [])
 
   return (
     <section className="bg-gray-50 py-12 px-4 md:px-12">
-      <h2 className="text-2xl font-semibold mb-6 text-center text-[#003366]">
-        Testimonials
-      </h2>
+      <h2 className="text-2xl font-semibold mb-6 text-center text-[#003366]">Testimonials</h2>
       <div className="max-w-3xl mx-auto text-center">
-        <blockquote className="italic text-xl mb-4 transition-opacity duration-500">
+        <blockquote
+          className={`italic text-xl mb-4 transition-opacity duration-500 ${
+            fade ? "opacity-100" : "opacity-0"
+          }`}
+        >
           "{testimonials[index].quote}"
         </blockquote>
         <cite className="text-[#003366] font-medium">
