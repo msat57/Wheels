@@ -22,27 +22,27 @@ export default function Header() {
       </button>
 
       {/* Desktop nav */}
-      <nav className="hidden md:flex gap-6">
-        <Link href="#hero">Home</Link>
+      <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
         <Link href="#services">Services</Link>
-        <Link href="#fleet">Fleet & Team</Link>
+        <Link href="#fleet">Fleet</Link>
         <Link href="#vintage">Vintage</Link>
         <Link href="#used">Used Bikes</Link>
         <Link href="#partners">Partners</Link>
         <Link href="#why">Why Us</Link>
+        <Link href="#gallery">Gallery</Link>
         <Link href="#contact">Contact</Link>
       </nav>
 
       {/* Mobile nav */}
       {isOpen && (
         <nav className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col gap-4 p-6 md:hidden">
-          <Link href="#hero" onClick={() => setIsOpen(false)}>Home</Link>
           <Link href="#services" onClick={() => setIsOpen(false)}>Services</Link>
-          <Link href="#fleet" onClick={() => setIsOpen(false)}>Fleet & Team</Link>
+          <Link href="#fleet" onClick={() => setIsOpen(false)}>Fleet</Link>
           <Link href="#vintage" onClick={() => setIsOpen(false)}>Vintage</Link>
           <Link href="#used" onClick={() => setIsOpen(false)}>Used Bikes</Link>
           <Link href="#partners" onClick={() => setIsOpen(false)}>Partners</Link>
           <Link href="#why" onClick={() => setIsOpen(false)}>Why Us</Link>
+          <Link href="#gallery" onClick={() => setIsOpen(false)}>Gallery</Link>
           <Link href="#contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </nav>
       )}
