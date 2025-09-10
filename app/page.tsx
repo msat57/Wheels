@@ -1,7 +1,9 @@
 'use client'
-  import SpecialSection from './SpecialSection'
 
 import Image from 'next/image'
+import SpecialSection from './SpecialSection'
+
+
 
 // Reusable components
 function Card({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -187,5 +189,6 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
+
 
 
