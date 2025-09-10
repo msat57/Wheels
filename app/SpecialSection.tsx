@@ -1,5 +1,6 @@
-'use client'
-import { useState } from 'react'
+"use client"
+
+import { useState } from "react"
 
 export default function SpecialSection() {
   const [open, setOpen] = useState(false)
@@ -48,6 +49,10 @@ export default function SpecialSection() {
           </div>
         </div>
       )}
+    </section>
+  )
+}
+
     </section>
   )
 }
