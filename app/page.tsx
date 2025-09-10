@@ -37,7 +37,7 @@ export default function DallasWheelsHomepage() {
         </div>
       </header>
 
-      {/* Hero / Intro */}
+      {/* Hero Section */}
       <section className="py-12 px-4 md:px-12 text-center">
         <h2 className="text-3xl font-semibold mb-4">Traditional Wheelbuilding. Modern Precision</h2>
         <p className="max-w-3xl mx-auto mb-6 text-gray-700">
@@ -82,15 +82,27 @@ export default function DallasWheelsHomepage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card><CardContent>
             <h3 className="font-bold text-lg mb-2 text-blue-600">Custom Bicycle Wheels</h3>
-            <p>Traditional techniques enhanced by analytics. Every wheel includes tension mapping report.</p>
+            <p>Traditional wheel building techniques enhanced by advanced analytics. Each build includes detailed tension mapping report.</p>
           </CardContent></Card>
           <Card><CardContent>
             <h3 className="font-bold text-lg mb-2 text-blue-600">Wheelchair & DME</h3>
-            <p>Precision services for wheelchair users & athletes. Pickup/delivery via Bike Medics.</p>
+            <p>Precision wheel services for wheelchair athletes and users. Pickup/delivery via Bike Medics makes service convenient.</p>
           </CardContent></Card>
           <Card><CardContent>
             <h3 className="font-bold text-lg mb-2 text-blue-600">Analytics-Driven Builds</h3>
-            <p>Computer-calculated precision combined with traditional craft for superior performance.</p>
+            <p>Advanced analytics ensures optimal spoke tension and wheel balance. Traditional building expertise for superior reliability.</p>
+          </CardContent></Card>
+          <Card><CardContent>
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Fleet & Team Services</h3>
+            <p>Professional team and fleet builds with volume pricing. Fast turnaround and expert support for bike shops and race teams.</p>
+          </CardContent></Card>
+          <Card><CardContent>
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Vintage Restoration</h3>
+            <p>Classic wheel restoration with period-correct parts and traditional techniques for authentic results and modern reliability.</p>
+          </CardContent></Card>
+          <Card><CardContent>
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Precision Repair & Truing</h3>
+            <p>Expert repair and truing with full lateral, radial, and dish analysis. Includes professional-grade tension balancing.</p>
           </CardContent></Card>
         </div>
       </section>
@@ -133,20 +145,52 @@ export default function DallasWheelsHomepage() {
       </section>
 
       {/* Why Dallas Wheels */}
-      <section id="why" className="py-12 px-4 md:px-12 bg-gray-50">
-        <h2 className="text-2xl font-semibold mb-6 text-teal-700">Why Dallas Wheels?</h2>
-        <p className="text-gray-700">
-          Hand-built and individually inspected wheels. Enhanced by analytics tech. Detailed mapping and reporting. Local pickup & delivery. Serving cyclists and wheelchair users alike.
-        </p>
+      <section id="why" className="bg-white py-12 px-4 md:px-12">
+        <h2 className="text-2xl font-semibold mb-6 text-center">Why Choose Dallas Wheels?</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="text-center">
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Traditional Expertise</h3>
+            <p>Decades of wheel building experience starting in 1973</p>
+          </div>
+          <div className="text-center">
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Advanced Analytics</h3>
+            <p>Enhanced by cutting-edge wheel analytics technology</p>
+          </div>
+          <div className="text-center">
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Authorized Dealer</h3>
+            <p>Official Berd Spoke Dealer with premium options</p>
+          </div>
+          <div className="text-center">
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Comprehensive Reports</h3>
+            <p>Detailed tension mapping and performance analysis</p>
+          </div>
+          <div className="text-center">
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Convenient Service</h3>
+            <p>Local pickup & delivery via Bike Medics partnership</p>
+          </div>
+          <div className="text-center">
+            <h3 className="font-bold text-lg mb-2 text-blue-600">Full Service Range</h3>
+            <p>Fleet services and vintage restoration specialists</p>
+          </div>
+        </div>
       </section>
 
       {/* Gallery */}
       <section id="gallery" className="py-12 px-4 md:px-12">
-        <h2 className="text-2xl font-semibold mb-6 text-teal-700">Gallery</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Gallery</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {Array.from({ length: 8 }, (_, i) => (
-            <div key={i} className="aspect-square overflow-hidden rounded shadow-md">
-              <Image src={`/gallery/wheel-${i + 1}.jpg`} alt={`Gallery ${i+1}`} width={400} height={400} className="object-cover w-full h-full"/>
+            <div
+              key={i}
+              className="aspect-square overflow-hidden rounded shadow-md hover:shadow-xl transition-all duration-200"
+            >
+              <Image
+                src={`/gallery/wheel-${i + 1}.jpg`}
+                alt={`Gallery Image ${i + 1}`}
+                width={400}
+                height={400}
+                className="object-cover w-full h-full"
+              />
             </div>
           ))}
         </div>
@@ -174,8 +218,24 @@ export default function DallasWheelsHomepage() {
       <section className="bg-gray-50 py-12 px-4 md:px-12">
         <h2 className="text-2xl font-semibold mb-6 text-center">Testimonials</h2>
         <div className="space-y-6 max-w-4xl mx-auto">
-          <Card><CardContent><blockquote className="italic">"Dallas Wheels built the most reliable wheelset I’ve ever used."</blockquote><cite className="text-blue-600">— A. Cyclist</cite></CardContent></Card>
-          <Card><CardContent><blockquote className="italic">"When my wheelchair rim cracked, DW had me rolling again in days."</blockquote><cite className="text-blue-600">— R. Adams</cite></CardContent></Card>
+          <Card>
+            <CardContent>
+              <blockquote className="italic text-lg mb-2">"Dallas Wheels built the most reliable wheelset I've ever used—solid in all conditions."</blockquote>
+              <cite className="text-blue-600 font-medium">— A. Cyclist</cite>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <blockquote className="italic text-lg mb-2">"When my wheelchair rim cracked, DW had me rolling again in days. Pickup and delivery was a lifesaver."</blockquote>
+              <cite className="text-blue-600 font-medium">— R. Adams</cite>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <blockquote className="italic text-lg mb-2">"A rare blend of old-school craft and nerdy precision. Love what they're doing."</blockquote>
+              <cite className="text-blue-600 font-medium">— B. Engineer</cite>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -186,4 +246,3 @@ export default function DallasWheelsHomepage() {
     </main>
   )
 }
-
