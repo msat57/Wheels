@@ -15,9 +15,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div className="bg-yellow-400 text-black text-center py-2 text-sm font-bold">
+  🎯 Introductory Special — 
+  <a href="#special" className="underline hover:text-blue-800 ml-1">Click here for details</a>
+</div>
+
         <Header />
           {children}
       </body>
     </html>
   );
 }
+
